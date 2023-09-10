@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Roboto+Mono:wght@100&family=Space+Mono&display=swap');
+
+/*for using colors as variables*/
+:root {
+    --main-bg-color: #7bdae4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    /* this will make sure that horizontal scollbar is absent and the element is adjusting right 
+    inside in the viewport width */
+}
+
+.textcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: var(--main-bg-color);
+    font-family: 'Belanosima', sans-serif;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    min-width: 98vw;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 11vh;
+}
+
+nav img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    width: 9vw;
+    height: 8vh;
+    position: relative;
+    /* top: 1vh; */
+}
+
+.search {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    top: -0.5vh;
+    /* left: 16vw; */
+}
+
+.search input {
+    width: 20vw ;
+    /* the value of width property won't be override   */
+    height: 3vh;
+    border-radius: 5px;
+    padding: 3px;
+    margin: 0 9px 0 56px;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.btn {
+    padding: 0px 4px;
+    color: white;
+    background-color: var(--main-bg-color);
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Belanosima', sans-serif;
+    width: 2vw;
+    height: 4vh;
+}
+
+.btn:hover {
+    color: #7bdae4;
+    background-color: white;
+    font-weight: bolder;
+}
+
+nav ul {
+    display: flex;
+    height: 9vh;
+    align-items: center;
+    margin-left: 38vw;
+    position: relative;
+    /* left: 40vw !important;
+    top: -14vh; */
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0 1.5vw;
+}
+
+nav ul li a {
+    color: rgb(75, 73, 73);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #d8ecf0fd;
+    font-weight: 200px;
+}
+
+
+/*starts main body*/
+
+
+.container {
+    min-height: calc(100vh - 11vh - 12vh);
+    /*this is a calculating function which calculates the height of whole web page and sets the height 
+    of that element accordingly.*/
+}
+
+.card {
+    max-width: 93vw;
+    margin: auto;
+    font-family: 'Belanosima', sans-serif;
+}
+
+.card h3 {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--main-bg-color);
+    color: rgb(75, 73, 73);
+    height: 12vh;
+    font-family: 'Belanosima', sans-serif;
+    margin-top: 15px;
+}
+
+.slidercontainer {
+    width: 98vw;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* by gpt */
+    width: max-content;
+    animation: slide 10s linear infinite;
+}
+
+.slider img {
+    padding-top: 1vh;
+    height: 40vh;
+    width: 60vw;
+    transform: translate(20px, 20px);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carditem {
+    margin: 0 5px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carditem img:hover{
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.textcenter {
+    text-align: center;
+}
+
+.lines p {
+    margin: 7px;
+}
